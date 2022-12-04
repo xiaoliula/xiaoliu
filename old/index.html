@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小刘的测试页面</title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <style>
+        body{
+            background-image: url("images/sky.jpg");
+            background-repeat:no-repeat ;
+            background-size:100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+	<script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+    </script>
+     <p style="font-size: 100px">
+     您的ip地址为：
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript">
+    document.write(returnCitySN["cip"]+','+returnCitySN["cname"])
+    </script>
+    </p>
+</head>
+<body>
+    <p style="font-size: 100px">
+        当前系统时间：<div id="dateTime" style="font-size: 100px"></div>
+    </p>
+	<p style="font-size: 100px">
+		此页面为小刘的测试页面，若成功打开此页面则代表服务器已经成功搭建
+	</p>
+    <p style="font-size: 80px">点这听音乐👉
+        <a style="text-decoration: none;" href="music.html">music😘</a>
+    </p>
+    <p style="font-size: 80px">点这进入blog👉
+        <a style="text-decoration: none;" href="https://www.cnblogs.com/liuhao-blog/">blog😘</a>
+    </p>
+    <p style="font-size: 80px">点这进入新版首页👉
+        <a style="text-decoration: none;" href="../index.html">首页😘</a>
+    </p>
+</body>
+</html>

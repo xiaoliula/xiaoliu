@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<title>小刘运动助手</title>
+<link rel="stylesheet" href="assets/layui/css/layui.css" media="all">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/layui/layui.js"></script>
+</head>
+<body layadmin-themealias="dark-blue" style="margin-top: 1em;"><center>
+<div class="imgc"></div>
+<div id="divLoading">
+<div class="layui-fluid">
+<div class="a layui-anim layui-anim-fadein">
+<div class="layui-row layui-col-space15">
+<div class="layui-col-sm8 layui-col-sm-offset2 layui-col-md6  layui-col-md-offset3 layui-col-lg6 layui-col-xs12  layui-col-lg-offset3">
+<div class="layui-card">
+<div class="layui-card-header" style="font-size: 1.5em;text-align: left;">小刘运动助手</div>
+<div class="layui-card-body">
+<img src="touxiang.png" alt="Avatar" width="80" height="80" style="border:1px solid #FFF;-moz-box-shadow:0 0 3px #AAA;-webkit-box-shadow:0 0 3px #AAA;border-radius: 50%;box-shadow:0 0 3px #AAA;padding:3px;margin-right: 3px;margin-left: 6px;"></p><br/>
+<h1>小刘运动助手</h1><br/>
+<div class="layui-form layui-form-pane">
+<div class="layui-form-item">
+<label class="layui-form-label">用户名</label> 
+<div class="layui-input-block">
+<input type="text" class="layui-input" id="user" name="user" placeholder="小米运动手机号">
+</div> 
+</div>
+<div class="layui-form-item">
+<label class="layui-form-label">密码</label> 
+<div class="layui-input-block">
+<input type="password" class="layui-input" id="pass" name="pass" placeholder="小米运动密码">
+</div> 
+</div>
+<div class="layui-form-item">
+<label class="layui-form-label">步数</label> 
+<div class="layui-input-block">
+<input type="number" class="layui-input" id="step" name="step" placeholder="1~98800">
+</div> 
+</div>
+<button  id="subimt" class="layui-btn layui-btn layui-btn-lg layui-btn-normal layui-btn-fluid" type="submit" lay-filter="formDemo">提交</button><br><br>
+<button  onclick="popnotice()" class="layui-btn layui-btn layui-btn-lg layui-btn-danger layui-btn-fluid" type="submit" lay-filter="formDemo">站点公告</button>
+</div>
+</div>
+<a href="help.html">常见问题</a><br><br>
+</div>
+<div class="layui-card">
+<div class="layui-card-header" style="font-size: 1.5em;text-align: center;">使用帮助</div>
+<div class="layui-card-body">
+<div class="well" style="text-align: left;">
+1.从应用商店下载小米运动,打开软件通过手机号注册登录</p>
+2.登录之后，点击我的->第三方接入->绑定需要同步的第三方平台</p>
+3.回到提交网页版，登陆，提交步数即可同步至你绑定的所有平台</p>
+如果步数每天都是0步，可能是刷步步数太多导致被举报封排行榜7天(7天后自动恢复)</p>
+建议日步数不要超过5万</p>
+如遇账号密码正确但还是提示错误，请尝试手动登录小米运动APP后等待几分钟再试</p></div>
+<footer class="col-sm-12 text-center">
+</footer>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="assets/layui/layui.js"></script>
+<script src="assets/layer/layer.js"></script>
+<script src="assets/js/stepsv3.js"></script>
+<script src="assets/js/gonggao.js"></script>
+</body></center>
+</html>

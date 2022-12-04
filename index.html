@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer"/>
+    <title>小刘的引导页</title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/app.css" type="text/css" media="all">
+    <link href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style>
+        #main article { border-bottom: none; }
+        body{
+            font: 500 .875em PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+            background-color: #07040e;
+        }
+        #canvas {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            cursor: none;
+        }
+        .content{
+            position: absolute;
+            z-index: 11;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .splash{
+            position: relative;
+        }
+        img#qq {
+            width: 128px;
+            background-size: cover;
+            border-radius: 200px;
+            box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
+            border: 3px solid #00a0ff;
+            opacity: 1;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: all 1.0s;
+        }
+        #qq:hover {
+            box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 19px #fff;
+            transform:rotate(360deg);
+            -ms-transform:rotate(360deg); 	/* IE 9 */
+            -moz-transform:rotate(360deg); 	/* Firefox */
+            -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+            -o-transform:rotate(360deg); 	/* Opera */
+            filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+    </style>
+    <script type="text/javascript">
+        function click(e) {
+            if (document.all) {
+                if (event.button==2||event.button==3) { alert("欢迎光临！这是小刘的引导页演示");
+                    oncontextmenu='return false';
+                }
+            }
+            if (document.layers) {
+                if (e.which == 3) {
+                    oncontextmenu='return false';
+                }
+            }
+        }
+        if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+        }
+        document.onmousedown=click;
+        document.oncontextmenu = new Function("return false;")
+        document.onkeydown =document.onkeyup = document.onkeypress=function(){
+            if(window.event.keyCode == 123) {
+                window.event.returnValue=false;
+                return(false);
+            }
+        }
+    </script>
+<script>
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "y+": this.getFullYear, //年
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds() //秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+</script>
+</head>
+<body class="home page page-id-194 page-template page-template-page-homepage page-template-page-homepage-php custom-background" ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="jumbotron">
+    <div class="container">
+        <div class="splash">
+            <div class="content">
+                <img src="touxiang.png" alt="PatternFly logo" id="qq" class="wow fadeInDown animated"
+                     style="visibility: visible; animation-name: fadeInDown;">
+                <h1 class="wow fadeIn animated" data-wow-delay="750ms" style="visibility: visible; animation-delay: 750ms; animation-name: fadeIn; border-bottom:none;">小刘忙</h1>
+                <h1 class="wow fadeIn animated" data-wow-delay="750ms" style="visibility: visible; animation-delay: 750ms; animation-name: fadeIn; border-bottom:none;" id="dateTime"></h1>
+               <br> <br> <br> <br>
+                <a href="https://www.cnblogs.com/liuhao-blog/" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>博客</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://images.cnblogs.com/cnblogs_com/blogs/772778/galleries/2232716/o_b071703f.jpg" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>联系</a>
+                <br> <br>
+                <a href="old/index.html" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>旧版</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="main/index.html" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>1 . 0</a>
+                <br> <br>
+                <a href="music/music.html" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>音乐</a>
+                &nbsp;&nbsp;
+                <a href="wxyundong/index.html" class="button button-glow button-border button-rounded button-primary"><i class="fa fa-vimeo-square"></i>刷步</a>
+
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas" width="100%" height="100%"></canvas>
+    <!-- <div id="particles-js"></div> -->
+</div>
+<script src="js/hovertreewelcome.js"></script>
+<script src="js/bg_window.js"></script>
+
+
+</body>
+</html>
